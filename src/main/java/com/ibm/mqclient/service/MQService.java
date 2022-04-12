@@ -29,7 +29,7 @@ public class MQService {
 		final Logger LOG = LoggerFactory.getLogger(MQService.class);
 
 		try {
-			String helloWorld = "Hello New World!";
+			String helloWorld = "Hello World!";
 			jmsTemplate.convertAndSend(queueName, helloWorld);
 			LOG.debug("Successfully Sent message: {} to the queue " + queueName, helloWorld);
 			return helloWorld;
